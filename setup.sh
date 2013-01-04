@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Setup .vimrc
 if [ "$0" != "./setup.sh" ]; then
     echo "Please run from project directory"
@@ -9,9 +9,9 @@ fi
 ln -s $PWD/.vimrc ~/.vimrc
 
 # Terminator
-if [! -d ~/.config/terminator ]; then
+if [ ! -d ~/.config/terminator ]; then
     mkdir -p ~/.config/terminator
 fi
-ln -s $PWD/terminator_config ~/.vimrc
+ln -s $PWD/terminator_config ~/.config/terminator/config
 
 ln -s $PWD/.bashrc ~/.bashrc
