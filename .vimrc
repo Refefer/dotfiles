@@ -1,3 +1,4 @@
+set tildeop
 set smartindent 
 set smarttab
 set tabstop=4
