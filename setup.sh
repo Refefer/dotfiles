@@ -15,3 +15,4 @@ fi
 ln -s $PWD/terminator_config ~/.config/terminator/config
 
 ln -s $PWD/.bashrc ~/.bashrc
+ln -s $PWD/.vim ~/.vim

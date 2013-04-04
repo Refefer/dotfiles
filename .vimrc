@@ -1,3 +1,6 @@
+syntax on
+filetype plugin on
+filetype indent on
 set tildeop
 set smartindent 
 set smarttab
