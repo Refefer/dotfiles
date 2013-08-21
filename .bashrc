@@ -105,6 +105,7 @@ fi
 export PATH=$PATH:$HOME/bin:/usr/share/scala/bin
 export PYTHONPATH=$PYTHONPATH:$HOME/lib
 export PYTHONSTARTUP=~/.pythonrc
+export EDITOR=vim
 
 set -o vi
 bind -m vi-insert '"jj": "\e"'
