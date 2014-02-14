@@ -2,7 +2,8 @@ syntax on
 filetype plugin on
 filetype indent on
 set tildeop
-set smartindent 
+"set cindent
+"set smartindent 
 set smarttab
 set tabstop=4
 set shiftwidth=4
@@ -12,6 +13,9 @@ set hidden
 set nu
 set title
 set hlsearch
+set tags=tags;/
+set nocompatible
+
 imap jj <esc>
 map <space> i <esc>l
 map g @
@@ -34,3 +38,5 @@ imap <S-Tab> <c-p>
 
 au BufRead,BufNewFile *.py hi introspect ctermfg=white
 au BufRead,BufNewFile *.py syn match introspect /\zsself\|cls\ze/
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 cindent smartindent

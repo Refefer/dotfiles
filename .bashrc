@@ -102,10 +102,13 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export PATH=$PATH:$HOME/bin:/usr/share/scala/bin
+export PATH=$PATH:$HOME/bin:/usr/share/scala/bin:$HOME/opt/bin
 export PYTHONPATH=$PYTHONPATH:$HOME/lib
 export PYTHONSTARTUP=~/.pythonrc
 export EDITOR=vim
 
 set -o vi
 bind -m vi-insert '"jj": "\e"'
+
+# Always caps->ctrl
+setxkbmap -option ctrl:nocaps
