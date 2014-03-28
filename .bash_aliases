@@ -7,5 +7,12 @@ alias ..7='cd ../../../../../../../'
 alias ..8='cd ../../../../../../../../'
 alias ..9='cd ../../../../../../../../../'
 alias nf='find . -name'
-alias jswap='cd `swapJavaScala`'
-alias ctsi='cts -c ~/Projects/Impact/WIPCast/WIPCast/code/tags'
+function goto() { 
+_FN="/tmp/qf.$$"
+qf -d -s $_FN
+if [ -f $_FN ]; then
+    cd `cat $_FN`
+    rm $_FN
+fi
+unset _FN
+}

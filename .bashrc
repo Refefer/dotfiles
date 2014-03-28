@@ -110,6 +110,8 @@ export EDITOR=vim
 
 set -o vi
 bind -m vi-insert '"jj": "\e"'
+bind '"\C-f": "qf\n"'
+bind '"\C-e": "goto\n"'
 
 # Always caps->ctrl
 setxkbmap -option ctrl:nocaps
