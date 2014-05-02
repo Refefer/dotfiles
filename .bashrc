@@ -107,10 +107,11 @@ export PATH=$PATH:$HOME/bin:/usr/share/scala/bin:$HOME/opt/bin
 export PYTHONPATH=$PYTHONPATH:$HOME/lib
 export PYTHONSTARTUP=~/.pythonrc
 export EDITOR=vim
+export AWS_SERVER=$HOME/Project/merlin-setup/scripts/servers
 
 set -o vi
 bind -m vi-insert '"jj": "\e"'
-bind '"\C-f": "qf\n"'
+bind '"\C-f": "qf -p\n"'
 bind '"\C-e": "goto\n"'
 
 # Always caps->ctrl

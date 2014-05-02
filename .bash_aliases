@@ -8,11 +8,22 @@ alias ..8='cd ../../../../../../../../'
 alias ..9='cd ../../../../../../../../../'
 alias nf='find . -name'
 function goto() { 
-_FN="/tmp/qf.$$"
-qf -d -s $_FN
-if [ -f $_FN ]; then
-    cd `cat $_FN`
-    rm $_FN
-fi
-unset _FN
+    _FN=$(qf -d -p -o)
+    if [ -n "$_FN" ]; then
+        cd $_FN
+    fi
+    unset _FN
+}
+
+alias gadd="git status --short | qf -m -f 'git add {2}'"
+
+# To easily kill processes
+alias qkill="ps aux | qf -f 'kill -9 {2}'"
+
+function up() {
+    _FN=$(echo $PWD | awk -F"/" '{for(i=2; i <NF; i++){base = sprintf("%s/%s", base, $i); print base}}' | qf -o -f "{1}")
+    if [ -n "$_FN" ]; then
+        cd $_FN
+    fi
+    unset _FN
 }
