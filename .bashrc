@@ -7,7 +7,7 @@
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
-HISTCONTROL=ignoredups:ignorespace
+export HISTCONTROL=ignoredups:ignorespace
 
 # append to the history file, don't overwrite it
 shopt -s histappend
@@ -100,19 +100,20 @@ fi
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
+    source /etc/bash_completion
 fi
 
-export PATH=$PATH:$HOME/bin:/usr/share/scala/bin:$HOME/opt/bin
+source $HOME/.bash_completion.bash
+export PATH=$PATH:$HOME/bin:/usr/share/scala/bin:$HOME/opt/bin:$HOME/.local/bin
 export PYTHONPATH=$PYTHONPATH:$HOME/lib
 export PYTHONSTARTUP=~/.pythonrc
 export EDITOR=vim
-export AWS_SERVER=$HOME/Project/merlin-setup/scripts/servers
 
 set -o vi
 bind -m vi-insert '"jj": "\e"'
-bind '"\C-f": "qf -p\n"'
-bind '"\C-e": "goto\n"'
+bind '"\C-f": "hf -e\n"'
+bind '"\C-g": "goto\n"'
+bind '"\C-h": "hist\n"'
 
 # Always caps->ctrl
 setxkbmap -option ctrl:nocaps

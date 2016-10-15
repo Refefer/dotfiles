@@ -27,3 +27,10 @@ function up() {
     fi
     unset _FN
 }
+
+alias open=gnome-open
+alias tl="todo.sh list"
+function hist() {
+    tac ~/.bash_history | awk '!c[$0] { print $0; c[$0] = 1}' | hf -s -e
+}
+
