@@ -19,6 +19,5 @@ ln -s $PWD/terminator_config ~/.config/terminator/config
 ln -s $PWD/.bashrc ~/.bashrc
 ln -s $PWD/.bash_aliases ~/.bash_aliases
 
-
 # CTags
 ln -s $PWD/.ctags ~/.ctags
