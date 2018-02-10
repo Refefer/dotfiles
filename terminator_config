@@ -1,30 +1,45 @@
 [global_config]
-borderless = true
-scrollbar_position = disabled
-
+  borderless = True
 [keybindings]
-switch_to_tab_1 = <Alt>1
-switch_to_tab_2 = <Alt>2
-switch_to_tab_3 = <Alt>3
-switch_to_tab_4 = <Alt>4
-switch_to_tab_5 = <Alt>5
-switch_to_tab_6 = <Alt>6
-switch_to_tab_7 = <Alt>7
-switch_to_tab_8 = <Alt>8
-switch_to_tab_9 = <Alt>9
-split_horiz = <Ctrl><Shift>j
-split_vert = <Ctrl><Shift>l
-go_up = <Alt>k
-go_down = <Alt>j
-go_left = <Alt>h
-go_right = <Alt>l
-resize_up = <Ctrl><Alt><Shift>k
-resize_down = <Ctrl><Alt><Shift>j
-resize_left = <Ctrl><Alt><Shift>h
-resize_right = <Ctrl><Alt><Shift>l
-
+  go_down = <Alt>j
+  go_left = <Alt>h
+  go_right = <Alt>l
+  go_up = <Alt>k
+  layout_launcher = None
+  resize_down = <Ctrl><Alt><Shift>j
+  resize_left = <Ctrl><Alt><Shift>h
+  resize_right = <Ctrl><Alt><Shift>l
+  resize_up = <Ctrl><Alt><Shift>k
+  split_horiz = <Ctrl><Shift>j
+  split_vert = <Ctrl><Shift>l
+  switch_to_tab_1 = <Alt>1
+  switch_to_tab_2 = <Alt>2
+  switch_to_tab_3 = <Alt>3
+  switch_to_tab_4 = <Alt>4
+  switch_to_tab_5 = <Alt>5
+  switch_to_tab_6 = <Alt>6
+  switch_to_tab_7 = <Alt>7
+  switch_to_tab_8 = <Alt>8
+  switch_to_tab_9 = <Alt>9
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
 [profiles]
-    [[defaultt]]
-        background_type = transparent 
-        background_image = /home/astanton/Pictures/neuron.jpg
-        background_darkness = 0.7
+  [[default]]
+    cursor_color = "#aaaaaa"
+    font = Ubuntu Mono 12
+    foreground_color = "#ffffff"
+    scrollback_lines = 5000
+    use_system_font = False
+  [[defaultt]]
+    background_color = "#ffffdd"
+    background_darkness = 0.7
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    foreground_color = "#000000"

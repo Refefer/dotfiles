@@ -24,6 +24,7 @@ map K <pageUp>
 map gl :bn<cr>
 map gh :bp<cr>
 map ga :!align<cr>
+map gs :!commenter<cr>
 map gj :join<cr>
 map H ^
 map L $

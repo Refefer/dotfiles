@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/andrew/Projects/etsy/dresden/dresden-keras'
+let g:netrw_dirhist_2='/home/andrew/Projects/etsy/dresden'
+let g:netrw_dirhist_3='/home/andrew/Projects/Personal/buzzsaw/src/features/numeric'
+let g:netrw_dirhist_4='/home/andrew/Projects/Personal/buzzsaw/buzzsaw-python'
+let g:netrw_dirhist_5='/home/andrew/sandbox/buzzsaw-sandbox/buzzsaw'
+let g:netrw_dirhist_6='/tmp/foo'
+let g:netrw_dirhist_7='/tmp/foobar'

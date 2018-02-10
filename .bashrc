@@ -103,17 +103,19 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     source /etc/bash_completion
 fi
 
-source $HOME/.bash_completion.bash
-export PATH=$PATH:$HOME/bin:/usr/share/scala/bin:$HOME/opt/bin:$HOME/.local/bin
+#source $HOME/.bash_completion.bash
+export PATH=$PATH:$HOME/bin:/usr/share/scala/bin:$HOME/opt/bin:$HOME/.local/bin:$HOME/.cargo/bin
 export PYTHONPATH=$PYTHONPATH:$HOME/lib
 export PYTHONSTARTUP=~/.pythonrc
 export EDITOR=vim
 
 set -o vi
 bind -m vi-insert '"jj": "\e"'
-bind '"\C-f": "hf -e\n"'
+bind '"\C-f": "hf -s -e\n"'
 bind '"\C-g": "goto\n"'
 bind '"\C-h": "hist\n"'
 
 # Always caps->ctrl
 setxkbmap -option ctrl:nocaps
+xset r rate 200 25
+export TERMINAL=alacritty
